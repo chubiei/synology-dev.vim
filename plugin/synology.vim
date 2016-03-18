@@ -8,7 +8,9 @@ endif
 
 if !exists('g:synology_project_dependency')
 	let g:synology_project_dependency = {
-	\	'synosyncfolder': ["libsynocat", "libsynopunch"]
+	\	"synosyncfolder": ["libsynocat", "libsynopunch", "libsynoacl", "libsynosdk", "libsynocore", "libsynoshare", "libdsm", "webapi-DSM5"],
+	\	"libsynosdk": ["libsynocore", "libsynoshare", "libsynocgi"],
+	\	"dsm": ["libsynosdk", "libdsm", "libsynocgi", "webapi-DSM5"]
 	\}
 endif
 
